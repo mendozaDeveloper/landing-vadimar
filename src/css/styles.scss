@@ -1,0 +1,404 @@
+.lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.corinthia-regular {
+    font-family: 'Corinthia', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.corinthia-bold {
+    font-family: 'Corinthia', cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+///////////////////////////////////////////////
+/* COLORES */
+$vadimar-rojo: #e1261d;
+$vadimar-negro: #232b35;
+$vadimar-negro2: #0e1317;
+
+///
+.red-color {
+    color: $vadimar-rojo;
+}
+.black-color {
+    color: $vadimar-negro;
+}
+.red-background {
+    background-color: $vadimar-rojo;
+}
+.black-background {
+    background-color: $vadimar-negro;
+}
+
+.black-background-block {
+    background-color: $vadimar-negro2;
+}
+
+body {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btnCustom {
+    background-color: $vadimar-rojo;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px 24px;
+    line-height: 20px;
+    &:hover,
+    &:active {
+        background-color: #fff !important;
+        color: $vadimar-rojo !important;
+        border-color: #fff !important;
+    }
+    &.btnCustomList {
+        padding: 8px 44px;
+    }
+}
+
+.contentPadding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contentPadding2 {
+    padding-top: 80px;
+    padding-bottom: 200px;
+}
+
+.btnMenu {
+    background-color: $vadimar-rojo;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    &:hover,
+    &:active {
+        background-color: #fff !important;
+        color: $vadimar-rojo !important;
+        border-color: #fff !important;
+    }
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    padding-top: 50px;
+    z-index: 99;
+}
+
+.contentBanner {
+    height: 100vh;
+    position: relative;
+    &.bg-banner-prin {
+        background-image: url('../assets/banner-prin.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:before {
+            content: '';
+            background-color: rgba($color: #161b21, $alpha: 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    }
+}
+.bannerLogo {
+    position: relative;
+    z-index: 1;
+}
+
+.textWelcome {
+    font-size: 80px;
+    padding-bottom: 20px;
+}
+.textlogoBanner {
+    font-size: 28px;
+    padding-top: 70px;
+}
+
+.blockMouse {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $vadimar-rojo;
+}
+
+.mainTit {
+    color: $vadimar-rojo;
+    font-size: 75px;
+}
+
+.secondTit {
+    color: $vadimar-negro;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.thridTit {
+    color: $vadimar-negro;
+    font-size: 160px;
+    text-transform: uppercase;
+    line-height: 130px;
+}
+
+.backTit {
+    font-size: 120px;
+    color: #707377;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    opacity: 0.08;
+    text-transform: uppercase;
+}
+
+.containerTitles {
+    position: relative;
+    margin-bottom: 60px;
+    .backTit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.productCard {
+    figure {
+        position: relative;
+    }
+    figCaption {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 46px 85px;
+        &::before {
+            content: '';
+            background: linear-gradient(180deg, rgba(22, 27, 33, 0) 50%, rgba(22, 27, 33, 1) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        p {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $vadimar-rojo;
+        }
+    }
+}
+
+.about-us-section {
+    display: flex;
+    align-items: center;
+}
+
+.blockAboutCont {
+    padding-bottom: 200px;
+    > .container {
+        top: -90px;
+    }
+}
+
+.blockAbout {
+    padding: 90px 40px 100px;
+    width: 40%;
+    max-width: 484px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    p {
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        line-height: 24px;
+    }
+}
+.blockAboutImg {
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+.image-slider {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    .slider-image {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+    .active-slide {
+        z-index: 10;
+        img {
+            transform: scale(1.4);
+            transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+        }
+    }
+}
+.swiper-slide {
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(11, 14, 17, 0.6);
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    &.swiper-slide-active {
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 86px;
+    height: 16px;
+    &::after {
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+    }
+}
+
+.swiper-button-prev {
+    background-image: url('../assets/arrow-left.svg');
+    left: 16%;
+    transform: translateX(-16%);
+    top: 10%;
+}
+.swiper-button-next {
+    background-image: url('../assets/arrow-right.svg');
+    right: 16%;
+    transform: translateX(-16%);
+    top: 10%;
+}
+
+// LISTADO DE PRODUCTOS
+
+.blockListProd {
+    margin-bottom: 150px;
+    figure {
+        position: relative;
+        width: 100%;
+        max-width: 496px;
+        display: inline-block;
+        &::before,
+        &::after {
+            content: '';
+            width: 70%;
+            height: 70%;
+            max-width: 315px;
+            max-height: 315px;
+            position: absolute;
+            z-index: 0;
+            background-color: rgba(35, 43, 53, 0.6);
+        }
+        &::before {
+            top: 0px;
+            left: 0px;
+        }
+        &::after {
+            bottom: 0px;
+            right: 0px;
+        }
+        img {
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    h3 {
+        line-height: 60px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    .listProdText {
+        padding-left: 10px;
+    }
+    .listProdImg {
+        &.listProdImgBlack {
+            figure {
+                &::before,
+                &::after {
+                    background-color: rgba(35, 43, 53, 1);
+                }
+            }
+        }
+    }
+    &.blockListProdRight {
+        .listProdImg {
+            order: 2;
+            text-align: right;
+        }
+        .listProdText {
+            order: 1;
+            padding-left: 0px;
+            padding-right: 10px;
+        }
+        figure {
+            text-align: right;
+        }
+    }
+}
+
+// LISTADO DE PRODUCTOS
