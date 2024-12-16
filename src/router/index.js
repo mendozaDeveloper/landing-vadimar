@@ -12,7 +12,19 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), // Utiliza el modo de historial HTML5
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 100
+      }
+    }
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

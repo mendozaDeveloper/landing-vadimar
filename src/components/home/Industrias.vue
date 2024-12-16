@@ -12,18 +12,18 @@
             </div>
         </div>
     </section>
-    <section class="contentPadding pt-0">
+    <section class="pt-0 pb-5">
         <div class="container">
             <div class="row">
                 <div
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg listProdImgBlack">
+                    <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
                         <figure>
                             <img src="@/assets/list-industria/harina-mostaza1.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
                         <div class="black-color">
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Harina de Mostaza Importada
@@ -52,13 +52,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="blockListProd d-flex justify-content-between flex-row">
-                    <div class="col-md-6 listProdImg listProdImgBlack">
+                <div
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row mb-0"
+                >
+                    <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
                         <figure>
                             <img src="@/assets/list-industria/harina-mostaza2.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-start">
+                    <div class="listProdText col-12 col-lg-6 d-flex align-items-start">
                         <div class="black-color">
                             <p class="text-end">
                                 Nuestro “polvo de mostaza” se diferencia de otras harinas de
@@ -86,14 +88,17 @@
                                 >
                             </p>
                             <div class="pb-5">
-                                <div class="d-flex justify-content-center gap-4 py-5">
+                                <div
+                                    class="contBtn d-flex justify-content-center flex-sm-row flex-column gap-4 py-5"
+                                >
                                     <a
                                         href="#"
                                         class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center"
                                         >VER CATÁLOGO</a
                                     >
                                     <a
-                                        href="#"
+                                        href="/downloads/tabla-de-especificaciones.pdf"
+                                        target="_blank"
                                         class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center"
                                         >ESPECIFICACIONES<br />TÉCNICAS</a
                                     >
@@ -102,6 +107,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="contentPadding pt-0">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <RouterLink
+                    to="#video"
+                    class="blockMouse blockMouseStatic d-flex flex-column justify-content-center align-items-center text-center"
+                    ><span class="pb-2 lato-black">Ver<br />Video</span>
+                    <span><img src="@/assets/arrow-down.svg" alt="" /></span
+                ></RouterLink>
             </div>
         </div>
     </section>

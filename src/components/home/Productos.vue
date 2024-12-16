@@ -6,14 +6,14 @@
             <div class="row">
                 <div
                     id="salmon-atlantico"
-                    class="blockListProd d-flex justify-content-between flex-row"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/salmon-atlantico.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Salmón Atlantico
@@ -37,14 +37,14 @@
 
                 <div
                     id="salmon-ahumado-carpaccios"
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/salmon-ahumado.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Salmón Ahumado y Carpaccios
@@ -66,13 +66,16 @@
                     </div>
                 </div>
 
-                <div id="ovas-salmon" class="blockListProd d-flex justify-content-between flex-row">
-                    <div class="col-md-6 listProdImg">
+                <div
+                    id="ovas-salmon"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                >
+                    <div class="col-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/ostras-salmon.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Ovas de Salmón<br />"Ikura"
@@ -105,14 +108,14 @@
                 </div>
                 <div
                     id="atun-aleta-amarilla"
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/atun.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Atún<br />Aleta Amarilla
@@ -139,14 +142,14 @@
 
                 <div
                     id="trucha-arcoiris-nacional"
-                    class="blockListProd d-flex justify-content-between flex-row"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/trucha.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Trucha Arcoíris Nacional
@@ -172,14 +175,14 @@
                 </div>
                 <div
                     id="paiche-amazonico"
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/paiche-amazonico.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Paiche Amazónico
@@ -211,14 +214,14 @@
 
                 <div
                     id="mejillones-patagonicos"
-                    class="blockListProd d-flex justify-content-between flex-row"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/mejillones-patagonicos.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Mejillones Patagónicos
@@ -244,14 +247,14 @@
                 </div>
                 <div
                     id="kani-kama"
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/kani-kana.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Kani Kama <br />
@@ -273,13 +276,16 @@
                     </div>
                 </div>
 
-                <div id="carne-wagyu" class="blockListProd d-flex justify-content-between flex-row">
-                    <div class="col-md-6 listProdImg">
+                <div
+                    id="carne-wagyu"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                >
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/carne-wagyu.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">Carne Wagyu</h3>
                             <p>
@@ -302,14 +308,14 @@
                 </div>
                 <div
                     id="cordero-patagonico"
-                    class="blockListProd blockListProdRight d-flex justify-content-between flex-row"
+                    class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/cordero-atagonico.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Cordero Patagónico
@@ -336,14 +342,14 @@
                 </div>
                 <div
                     id="masa-primavera-spring-roll"
-                    class="blockListProd d-flex justify-content-between flex-row"
+                    class="blockListProd d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-md-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure>
                             <img src="@/assets/list-products/masa-primavera.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-md-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Masa Primavera Spring Roll

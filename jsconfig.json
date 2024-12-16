@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-      "baseUrl": ".", // Define la base como la raíz del proyecto
-      "paths": {
-        "@/*": ["src/*"] // Mapea el alias "@" a la carpeta "src"
-      }
+        "baseUrl": ".", // Define la base como la raíz del proyecto
+        "paths": {
+            "@/*": ["src/*"] // Mapea el alias "@" a la carpeta "src"
+        }
     },
     "include": ["src/**/*"] // Asegúrate de incluir los archivos dentro de "src"
-  }
-  
+}
