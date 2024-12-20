@@ -85,6 +85,10 @@ $vadimar-negro2: #0e1317;
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #fff;
     font-family: 'Lato', sans-serif;
@@ -94,6 +98,12 @@ body {
 
 .main-content {
     animation: fade-in 1s ease forwards;
+    position: relative;
+    z-index: 999;
+}
+
+.modal-backdrop {
+    z-index: 998;
 }
 
 .preloader {
@@ -113,7 +123,7 @@ body {
 }
 
 .loading-text {
-    font-size: 2rem;
+    font-size: 200px;
     font-weight: bold;
     color: black;
     animation: fade-in 1s ease;
@@ -187,7 +197,7 @@ body {
     z-index: 99;
     transition: all 0.3s ease-in-out;
     &.fixed-top {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: #fff;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -201,11 +211,14 @@ body {
     height: 100%;
     z-index: 999;
     background-color: $vadimar-negro;
+    overflow-y: auto;
     .blockMenu {
         padding: 60px 20px 40px 20px;
         background-color: $vadimar-rojo;
+        width: 60%;
     }
     .blockLogo {
+        width: 40%;
         padding: 60px 10px 40px 10px;
         background-image: url('../assets/bg-menu.png');
         background-position: center;
@@ -458,12 +471,19 @@ body {
             width: 100%;
         }
     }
+    &:hover {
+        figCaption {
+            opacity: 1;
+        }
+    }
     figCaption {
+        transition: opacity 0.4s ease-in-out;
         position: absolute;
         top: 0;
         width: 100%;
         height: 100%;
         padding: 46px 85px;
+        opacity: 0;
         &::before {
             content: '';
             background: linear-gradient(180deg, rgba(22, 27, 33, 0) 50%, rgba(22, 27, 33, 1) 100%);
@@ -688,10 +708,15 @@ body {
         border-radius: 0;
         color: #fff;
         margin-bottom: 40px;
+        font-family: 'bodoni72cregular';
+        font-weight: normal;
+        font-size: 20px;
         &:focus {
             box-shadow: none;
         }
         &::placeholder {
+            font-family: 'bodoni72cregular';
+            font-weight: normal;
             color: #fff;
             font-size: 20px;
             font-style: italic;
@@ -717,6 +742,10 @@ body {
     }
     .footerTextCenter {
         font-size: 14px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
     }
 }
 /* FOOTER */
@@ -772,6 +801,14 @@ body {
     .blockAboutCont {
         padding-bottom: 140px;
     }
+    .sideMenu {
+        .blockMenu {
+            width: 65%;
+        }
+        .blockLogo {
+            width: 35%;
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -822,6 +859,14 @@ body {
     .blockListProd {
         p {
             font-size: 17px;
+        }
+    }
+    .sideMenu {
+        .blockMenu {
+            width: 100%;
+        }
+        .blockLogo {
+            display: none !important;
         }
     }
 }
@@ -942,6 +987,23 @@ body {
     .contentVideo {
         margin-top: 0;
     }
+    .sideMenu {
+        .blockMenu {
+            width: 100%;
+            > .row {
+                > div {
+                    &:first-child {
+                        order: 2;
+                        > div {
+                            &:last-child {
+                                padding: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -962,6 +1024,31 @@ body {
     .backTit {
         font-size: 61px;
         margin-top: 0px;
+    }
+    .sideMenu {
+        #navbar_top {
+            padding: 20px;
+            ul {
+                li {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .blockMenu {
+            padding-top: 80px;
+            > .row {
+                > div {
+                    &:first-child {
+                        > div {
+                            &:last-child {
+                                padding: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

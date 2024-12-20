@@ -8,7 +8,7 @@ const modules = [Autoplay, EffectFade]
 </script>
 
 <template>
-    <section class="contentBanner">
+    <section id="home" class="contentBanner">
         <swiper
             :slides-per-view="1"
             :space-between="0"

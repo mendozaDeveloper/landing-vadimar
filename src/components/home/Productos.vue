@@ -50,7 +50,7 @@
                                 Salmón Ahumado y Carpaccios
                             </h3>
                             <p>
-                                Desde hacer más de 20 años importamos y distribuimos salmón ahumado
+                                Desde hace más de 20 años importamos y distribuimos salmón ahumado
                                 congelado South Wind. Producido en una planta certificada que cumple
                                 con los estándares más altos de calidad y de cuidado del medio
                                 ambiente, nuestro salmón ahumado viene en porciones perfectas, cada
@@ -85,14 +85,14 @@
                                 gastronomía japonesa y mundial.
                             </p>
                             <p>
-                                Tradicionalmente, el ikura se prepara marinando las huevas en una
-                                mezcla de salsa de soja y sake, lo que les da su característico
-                                sabor umami. Se puede disfrutar de muchas maneras, como sobre arroz
+                                Tradicionalmente, el ikura se prepara marinando las ovas en una
+                                mezcla de salsa de soja y sake, lo que le da su característico sabor
+                                umami. Se puede disfrutar de muchas maneras, como sobre arroz
                                 caliente para sushi, en ensaladas, o incluso solo como un aperitivo.
                             </p>
                             <p>
-                                Desde el 2006, Ikura Sur, selecciona en el sur de chile, las ovas
-                                más finas de salmón del atlántico (salmo salar) o del salmón de
+                                Desde el 2006, Ikura Sur, selecciona en el sur de Chile, las ovas
+                                más finas de salmón del atlántico (salmo salar) o del salmón del
                                 pacífico (Oncorhynchus kisutch). Estas ovas son curadas con sal de
                                 mar y congeladas para crear lo que, en Japón, se conoce como
                                 "IKURA".
@@ -162,9 +162,8 @@
                                 congelado empacados al vacío (filetes y porciones).
                             </p>
                             <p>
-                                Desde Puno, también nos llega trucha arcoíris de tamaño de
-                                tradicional, pequeña, conocida como trucha “pan size” o filete
-                                tamaño de plato.
+                                Desde Puno, también nos llega trucha arcoíris de tamaño tradicional,
+                                pequeña, conocida como trucha “pan size” o filete tamaño de plato.
                             </p>
                             <p>
                                 Además, también ofrecemos trucha ahumada, refrigerada y laminada en
@@ -204,7 +203,7 @@
                             </p>
                             <p>
                                 En Pucallpa, nuestro socio estratégico Amazon Fish Products, cría
-                                desde hace de más de 10 años paiche premium de fuente sostenible, el
+                                desde hace más de 10 años paiche premium de fuente sostenible, el
                                 cual distribuimos a nivel nacional. Las presentaciones en fresco &
                                 congelado son: (entero HG, filete, panza, lomo y en porciones).
                             </p>
@@ -234,7 +233,7 @@
                             <p>
                                 Además, es un recurso significativo para la acuicultura en Chile,
                                 con una producción comercial considerable destinada principalmente a
-                                la exportación desde el sur de Chile, importamos la variedad
+                                la exportación desde el sur de Chile. Importamos la variedad
                                 “Chilean blue mussel” (Mytilus chilensis) criados por PESBASA, de
                                 fuente sostenible y con certificaciones internacionales.
                             </p>
@@ -262,7 +261,7 @@
                             </h3>
                             <p>
                                 Nuestro Surimi es elaborado a base de pescado blanco de las frías y
-                                profundas aguas del puerto Deseado, en la Patagonia argentina. El
+                                profundas aguas del puerto Deseado, en la Patagonia Argentina. El
                                 Surimi es la máxima expresión de la proteína de pescado. Se elabora
                                 con pescado recién capturado, tomando la proteína de mejor calidad,
                                 de alto valor nutricional, libre de gluten, bajo en calorías y
@@ -301,7 +300,8 @@
                             <p>
                                 La región de los Lagos se extiende al este desde la cordillera de
                                 los Andes hasta el océano Pacífico al oeste. En este ambiente libre
-                                de pestes y enfermedades, se cría un ganado Wagyu de clase mundial.
+                                de pestes y enfermedades, se cría un ganado Wagyu de clase mundial,
+                                cuya carne tiene un marmoleo y sabor excepcional.
                             </p>
                         </div>
                     </div>
@@ -332,10 +332,10 @@
                             <p>
                                 La región de Magallanes posee un clima frío y libre de contaminación
                                 que se puede sentir en sus extensas praderas, con ríos que son
-                                fuentes de agua cristalina que nacen de glaciares milenarios. En
-                                este ambiente libre de químicos y pesticidas, se crían animales
-                                sanos, ideales para una producción ovina que está entre las mejores
-                                del mundo.
+                                fuente de agua cristalina que nacen de glaciares milenarios. En este
+                                ambiente libre de químicos y pesticidas, se crían animales sanos,
+                                ideales para una producción ovina que está entre las mejores del
+                                mundo.
                             </p>
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                                 Masa Primavera Spring Roll
                             </h3>
                             <p>
-                                Importada desde Singapur,” Spring Home”, es la marca de masa para
+                                Importada desde Singapur, "Spring Home", es la marca de masa para
                                 enrollados más vendida a nivel mundial.
                             </p>
                             <p>

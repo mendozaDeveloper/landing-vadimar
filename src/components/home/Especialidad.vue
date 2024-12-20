@@ -90,7 +90,7 @@ const breakpoints = {
 </script>
 
 <template>
-    <section class="contentPadding">
+    <section id="la-especialidad" class="contentPadding">
         <div class="container">
             <div class="row">
                 <div class="d-flex flex-column justify-content-center align-items-center">

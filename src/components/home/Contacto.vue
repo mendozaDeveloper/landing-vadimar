@@ -1,6 +1,9 @@
 <script setup>
+import { ref } from 'vue'
+import emailjs from 'emailjs-com'
 import { Form, Field, useForm } from 'vee-validate'
 import { schema } from './schemas/validationSchema.js'
+import Swal from 'sweetalert2'
 
 const { errors, handleSubmit, defineField, isSubmitting } = useForm({
     validationSchema: schema
@@ -12,8 +15,39 @@ const [email, emailAttrs] = defineField('email')
 const [company, companyAttrs] = defineField('company')
 const [message] = defineField('message')
 
+const sendEmail = async (values) => {
+    try {
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        const userId = import.meta.env.VITE_EMAILJS_USER_ID
+
+        // Enviar correo
+        await emailjs.send(serviceId, templateId, values, userId)
+
+        // Mostrar mensaje de éxito
+        Swal.fire({
+            icon: 'success',
+            title: '¡Correo enviado!',
+            text: 'El correo se ha enviado correctamente.',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar'
+        })
+    } catch (error) {
+        console.error(error)
+        Swal.fire({
+            icon: 'error',
+            title: '¡Error!',
+            text: 'No se pudo enviar el correo. Inténtalo nuevamente.',
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'Cerrar'
+        })
+    }
+}
+
 const onSubmit = handleSubmit(async (values, { resetForm }) => {
-    console.log('Formulario Enviado')
+    console.log('Formulario Enviado', values)
+    await sendEmail(values)
+    resetForm()
 })
 </script>
 
@@ -152,7 +186,13 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                             </div>
                             <div class="d-flex align-items-center gap-4 mb-3">
                                 <div><img src="@/assets/icon-marker.svg" alt="" /></div>
-                                <div>Calle Joaquín Capello 545 Miraflores, Lima - Perú</div>
+                                <div>
+                                    <a
+                                        href="https://maps.app.goo.gl/ZjS9G4nDgtieN8Xj6"
+                                        target="_blank"
+                                        >Calle Joaquín Capello 545 Miraflores, Lima - Perú</a
+                                    >
+                                </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mb-3">
                                 <div><img src="@/assets/icon-phone.svg" alt="" /></div>
@@ -164,14 +204,27 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                                 <div><img src="@/assets/icon-whatsapp.svg" alt="" /></div>
                                 <div class="d-flex align-items-center gap-4">
                                     <span
-                                        >+51 970 076 318<br />
-                                        +51 934 568 737<br />
-                                        +51 957 514 759</span
-                                    >
-                                    <span
-                                        >+51 919 483 776<br />
-                                        +51 919 492 089<br /><br
-                                    /></span>
+                                        ><a href="https://wa.me/51970076318" target="_blank"
+                                            >+51 970 076 318</a
+                                        ><br />
+                                        <a href="https://wa.me/51934568737" target="_blank"
+                                            >+51 934 568 737</a
+                                        >
+                                        <br />
+                                        <a href="https://wa.me/51957514759" target="_blank"
+                                            >+51 957 514 759</a
+                                        >
+                                    </span>
+                                    <span>
+                                        <a href="https://wa.me/51919483776" target="_blank"
+                                            >+51 919 483 776</a
+                                        >
+                                        <br />
+                                        <a href="https://wa.me/51919492089" target="_blank"
+                                            >+51 919 492 089</a
+                                        >
+                                        <br /><br />
+                                    </span>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mb-3">
@@ -227,7 +280,10 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                                     12.00 p.m.
                                 </div>
                                 <div>
-                                    <a href="#" class="lato-black text-white"
+                                    <a
+                                        href="https://gosocket.net/"
+                                        target="_blank"
+                                        class="lato-black text-white"
                                         >Factura Electrónica</a
                                     >
                                 </div>

@@ -21,7 +21,10 @@
                             <figure>
                                 <img src="@/assets/img-producto1.png" alt="" />
                                 <figCaption class="d-flex justify-content-center align-items-end">
-                                    <p class="lato-bold">Insumos para la industria alimentaria</p>
+                                    <p class="lato-bold">
+                                        Pescados, mariscos, carnes, masa rollos primavera y kani
+                                        kama
+                                    </p>
                                 </figCaption>
                             </figure>
                         </div>

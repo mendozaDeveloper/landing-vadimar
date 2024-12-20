@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const videoUrl = ref('https://www.youtube.com/embed/v35rLCh439g')
+const videoUrl = ref('https://www.youtube.com/embed/26PaWIYYaLg')
 </script>
 
 <template>

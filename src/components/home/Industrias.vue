@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <section class="contentPadding pb-0">
+    <section id="industria" class="contentPadding pb-0">
         <div class="container">
             <div class="row">
                 <div class="d-flex">
@@ -20,7 +20,7 @@
                 >
                     <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
                         <figure>
-                            <img src="@/assets/list-industria/harina-mostaza1.png" alt="" />
+                            <img src="@/assets/list-industria/harina-mostaza1.jpg" alt="" />
                         </figure>
                     </div>
                     <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
@@ -31,7 +31,7 @@
                             <p>
                                 La harina de mostaza se encuentra entre las especias más adaptables
                                 del planeta. Además de su gusto único y sus propiedades nutritivas,
-                                desempeña una serie de roles muy útiles como ingrediente, tales como
+                                desempeña una serie de roles muy útiles como ingrediente,
                                 emulsionante, antioxidante, estabilizador, conservante y
                                 aglutinante.
                             </p>
@@ -57,29 +57,29 @@
                 >
                     <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
                         <figure>
-                            <img src="@/assets/list-industria/harina-mostaza2.png" alt="" />
+                            <img src="@/assets/list-industria/harina-mostaza2.jpg" alt="" />
                         </figure>
                     </div>
                     <div class="listProdText col-12 col-lg-6 d-flex align-items-start">
-                        <div class="black-color">
-                            <p class="text-end">
+                        <div class="black-color w-100">
+                            <p>
                                 Nuestro “polvo de mostaza” se diferencia de otras harinas de
                                 mostaza, porque la mezcla no tiene cáscaras en la molienda y la
                                 semilla de mostaza que se muele, ha pasado por un proceso patentado
                                 con el cual se le retira el aceite, dándonos un producto final más
                                 puro y de mejor calidad.
                             </p>
-                            <p class="text-end">
+                            <p>
                                 Nuestros productos están certificados con Kosher, Halal y FDA.
                                 Operamos bajo un plan HACCP, que garantiza un alto nivel de
                                 seguridad alimentaria, aseguramiento de la calidad y completa
                                 trazabilidad del producto.
                             </p>
-                            <p class="text-end">
+                            <p>
                                 Sakai Spice Canadá, también produce polvo de Wasabi para la cocina
                                 japonesa.
                             </p>
-                            <p class="text-end">
+                            <p>
                                 <a
                                     href="https://sakaispice.com/home"
                                     target="_blank"
@@ -87,20 +87,37 @@
                                     ><i>https://sakaispice.com/home</i></a
                                 >
                             </p>
+                            <div class="py-4">
+                                <div class="d-flex flex-align-start">
+                                    <div>
+                                        <img
+                                            src="@/assets/certificaciones.png"
+                                            alt=""
+                                            class="w-100"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                             <div class="pb-5">
                                 <div
-                                    class="contBtn d-flex justify-content-center flex-sm-row flex-column gap-4 py-5"
+                                    class="contBtn d-sm-flex d-lg-block d-xl-flex justify-content-center flex-sm-row flex-column gap-4 py-5"
                                 >
                                     <a
-                                        href="#"
-                                        class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center"
+                                        href="/downloads/brochure-harina-mostaza.pdf"
+                                        target="_blank"
+                                        class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
                                         >VER CATÁLOGO</a
                                     >
                                     <a
                                         href="/downloads/tabla-de-especificaciones.pdf"
                                         target="_blank"
-                                        class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center"
+                                        class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
                                         >ESPECIFICACIONES<br />TÉCNICAS</a
+                                    >
+                                    <RouterLink
+                                        to="#video"
+                                        class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
+                                        >VER VIDEO</RouterLink
                                     >
                                 </div>
                             </div>
@@ -110,7 +127,7 @@
             </div>
         </div>
     </section>
-    <section class="contentPadding pt-0">
+    <!--<section class="contentPadding pt-0">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <RouterLink
@@ -121,5 +138,5 @@
                 ></RouterLink>
             </div>
         </div>
-    </section>
+    </section>-->
 </template>

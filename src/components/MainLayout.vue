@@ -1,7 +1,9 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 
 import SideBar from './home/SideBar.vue'
+
+const showMenu = ref(false)
 
 const loading = ref(true)
 const percentage = ref(0)
@@ -31,6 +33,10 @@ const handleScroll = () => {
         header.classList.remove('fixed-top')
     }
 }
+
+watch(showMenu, (newVal) => {
+    document.body.style.overflow = newVal ? 'hidden' : 'auto'
+})
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll)
@@ -87,7 +93,7 @@ onBeforeUnmount(() => {
                     <div class="col-md-6 text-center">
                         <div
                             v-if="!hideText"
-                            class="loading-text lato-bold"
+                            class="loading-text bodoni72cregular"
                             :style="{ opacity: textOpacity }"
                         >
                             {{ percentage }}%
@@ -105,17 +111,18 @@ onBeforeUnmount(() => {
         </div>
 
         <div v-else class="main-content">
-            <!--<SideBar></SideBar>-->
+            <SideBar :showMenu="showMenu" @closeMenu="showMenu = false"></SideBar>
 
             <header id="header">
                 <div class="container">
                     <div class="row">
                         <div class="d-flex justify-content-between">
-                            <a
-                                href="#"
+                            <button
+                                @click="showMenu = true"
                                 class="btnMenu lato-bold btn d-flex justify-content-center align-items-center"
-                                >Me<br />nu</a
                             >
+                                Me<br />nu
+                            </button>
                             <RouterLink
                                 to="#contacto"
                                 class="btnCustom btn d-flex justify-content-center align-items-center"
