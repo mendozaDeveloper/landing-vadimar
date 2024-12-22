@@ -472,11 +472,11 @@ body {
         }
     }
     &:hover {
-        figCaption {
+        figcaption {
             opacity: 1;
         }
     }
-    figCaption {
+    figcaption {
         transition: opacity 0.4s ease-in-out;
         position: absolute;
         top: 0;
@@ -505,6 +505,43 @@ body {
             border-bottom: 1px solid $vadimar-rojo;
         }
     }
+}
+
+#ProdTitle {
+    transform: scale(0.2) translateY(-500%);
+    opacity: 0;
+}
+
+#ProdSecondTit {
+    transform: translateY(60%);
+    opacity: 0;
+}
+
+#ProdBackTit {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+}
+
+.productCardIzq {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.productCardDer {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.productCardIzq,
+.productCardDer {
+    @media (max-width: 992px) {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#nuestros-productos {
+    overflow-x: hidden;
 }
 
 .about-us-section {
@@ -540,6 +577,7 @@ body {
         height: 100%;
     }
 }
+
 .image-slider {
     width: 100%;
     margin: auto;
@@ -549,7 +587,7 @@ body {
         height: auto;
         transition: transform 0.3s ease-in-out;
     }
-    .active-slide {
+    .swiper-slide-active {
         z-index: 10;
         img {
             display: block;
@@ -774,7 +812,7 @@ body {
         line-height: 110px;
     }
     .productCard {
-        figCaption {
+        figcaption {
             p {
                 font-size: 26px;
             }
@@ -841,7 +879,7 @@ body {
         font-size: 20px;
     }
     .productCard {
-        figCaption {
+        figcaption {
             padding: 26px 30px;
             p {
                 font-size: 20px;
@@ -892,7 +930,7 @@ body {
         }
     }
     .productCard {
-        figCaption {
+        figcaption {
             padding: 40px 30px;
         }
     }
@@ -924,7 +962,7 @@ body {
         }
     }
     .image-slider {
-        .active-slide {
+        .swiper-slide-active {
             img {
                 transform: scale(1);
             }

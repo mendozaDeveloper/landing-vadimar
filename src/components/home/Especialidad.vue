@@ -2,76 +2,8 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import { Navigation } from 'swiper/modules'
-import { ref } from 'vue'
 
 const modules = [Navigation]
-
-const activeIndex = ref(0)
-
-const images = [
-    {
-        image: '/src/assets/img-productos/salmon-atlantico.png',
-        link: 'salmon-atlantico'
-    },
-    {
-        image: '/src/assets/img-productos/salmon-ahumado.png',
-        link: 'salmon-ahumado-carpaccios'
-    },
-    {
-        image: '/src/assets/img-productos/ovas-salmon.png',
-        link: 'ovas-salmon'
-    },
-    {
-        image: '/src/assets/img-productos/atun.png',
-        link: 'atun-aleta-amarilla'
-    },
-    {
-        image: '/src/assets/img-productos/trucha.png',
-        link: 'trucha-arcoiris-nacional'
-    },
-    {
-        image: '/src/assets/img-productos/paiche-amazonico.png',
-        link: 'paiche-amazonico'
-    },
-    {
-        image: '/src/assets/img-productos/mejillones-patagonicos.png',
-        link: 'mejillones-patagonicos'
-    },
-    {
-        image: '/src/assets/img-productos/kani-kana.png',
-        link: 'kani-kama'
-    },
-    {
-        image: '/src/assets/img-productos/carne-wagyu.png',
-        link: 'carne-wagyu'
-    },
-    {
-        image: '/src/assets/img-productos/cordero-patagonico.png',
-        link: 'cordero-patagonico'
-    },
-    {
-        image: '/src/assets/img-productos/masa-primavera.png',
-        link: 'masa-primavera-spring-roll'
-    }
-]
-
-const onSlideChange = (swiper) => {
-    activeIndex.value = swiper.realIndex
-}
-
-const scrollToBlock = (id) => {
-    const element = document.getElementById(id)
-    if (element) {
-        const offset = 100
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY
-        const offsetPosition = elementPosition - offset
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        })
-    }
-}
 
 const breakpoints = {
     0: {
@@ -119,20 +51,89 @@ const breakpoints = {
                         :loop="true"
                         :navigation="true"
                         :modules="modules"
-                        @slideChange="onSlideChange"
                         :breakpoints="breakpoints"
                     >
-                        <swiper-slide
-                            v-for="(image, index) in images"
-                            :key="index"
-                            :class="{ 'active-slide': index === activeIndex }"
-                        >
-                            <img
-                                :src="image.image"
-                                :alt="'Image ' + index"
-                                class="slider-image"
-                                @click="scrollToBlock(image.link)"
-                            />
+                        <swiper-slide>
+                            <RouterLink to="#salmon-atlantico">
+                                <img
+                                    src="@/assets/img-productos/salmon-atlantico.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#salmon-ahumado-carpaccios">
+                                <img
+                                    src="@/assets/img-productos/salmon-ahumado.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#ovas-salmon">
+                                <img
+                                    src="@/assets/img-productos/ovas-salmon.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#atun-aleta-amarilla">
+                                <img src="@/assets/img-productos/atun.png" class="slider-image" />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#trucha-arcoiris-nacional">
+                                <img src="@/assets/img-productos/trucha.png" class="slider-image" />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#paiche-amazonico">
+                                <img
+                                    src="@/assets/img-productos/paiche-amazonico.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#mejillones-patagonicos">
+                                <img
+                                    src="@/assets/img-productos/mejillones-patagonicos.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#kani-kama">
+                                <img
+                                    src="@/assets/img-productos/kani-kana.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#carne-wagyu">
+                                <img
+                                    src="@/assets/img-productos/carne-wagyu.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#cordero-patagonico">
+                                <img
+                                    src="@/assets/img-productos/cordero-patagonico.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#masa-primavera-spring-roll">
+                                <img
+                                    src="@/assets/img-productos/masa-primavera.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
                         </swiper-slide>
                     </swiper>
                 </div>

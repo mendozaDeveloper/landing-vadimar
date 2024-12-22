@@ -1,14 +1,104 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+    let dataViewPort = gsap.matchMedia()
+
+    // add a media query. When it matches, the associated function will run
+    dataViewPort.add('(min-width: 993px)', () => {
+        let productCardIzq = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#nuestros-productos .productCardIzq',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+                ease: 'power2.in'
+            }
+        })
+
+        let productCardDer = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#nuestros-productos .productCardDer',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        })
+
+        let ProdTitle = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#ProdTitle',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        })
+
+        let ProdSecondTit = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#ProdSecondTit',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        })
+
+        let ProdBackTit = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#ProdBackTit',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        })
+
+        ////// Animaciones //////
+
+        productCardIzq.to('#nuestros-productos .productCardIzq', {
+            duration: 0.8,
+            x: '0%',
+            opacity: 1
+        })
+
+        productCardDer.to('#nuestros-productos .productCardDer', {
+            duration: 0.8,
+            x: '0%',
+            opacity: 1
+        })
+
+        ProdTitle.to('#ProdTitle', {
+            duration: 0.8,
+            opacity: 1,
+            scale: 1,
+            y: '0%'
+        })
+
+        ProdSecondTit.to('#ProdSecondTit', {
+            duration: 0.8,
+            opacity: 1,
+            y: '0%'
+        })
+
+        ProdBackTit.to('#ProdBackTit', {
+            duration: 0.9,
+            opacity: 0.08,
+            y: '-50%',
+            x: '0%'
+        })
+    })
+})
+</script>
 
 <template>
     <section id="nuestros-productos" class="contentPadding">
         <div class="container">
             <div class="row">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h2 class="mainTit corinthia-bold mt-5 mb-0">Presentamos</h2>
+                    <h2 id="ProdTitle" class="mainTit corinthia-bold mt-5 mb-0">Presentamos</h2>
                     <div class="containerTitles">
-                        <h3 class="secondTit lato-black text-center">Nuestros Productos</h3>
-                        <h4 class="backTit">Vadimar</h4>
+                        <h3 id="ProdSecondTit" class="secondTit lato-black text-center">
+                            Nuestros Productos
+                        </h3>
+                        <h4 id="ProdBackTit" class="backTit">Vadimar</h4>
                     </div>
                 </div>
             </div>
@@ -17,25 +107,25 @@
                     class="containerProds d-flex justify-content-between flex-column flex-lg-row gap-5 mt-3 mt-lg-5"
                 >
                     <div>
-                        <div class="productCard">
+                        <div ref="productCardIzq" class="productCard productCardIzq">
                             <figure>
                                 <img src="@/assets/img-producto1.png" alt="" />
-                                <figCaption class="d-flex justify-content-center align-items-end">
+                                <figcaption class="d-flex justify-content-center align-items-end">
                                     <p class="lato-bold">
                                         Pescados, mariscos, carnes, masa rollos primavera y kani
                                         kama
                                     </p>
-                                </figCaption>
+                                </figcaption>
                             </figure>
                         </div>
                     </div>
                     <div>
-                        <div class="productCard">
+                        <div ref="productCardDer" class="productCard productCardDer">
                             <figure>
                                 <img src="@/assets/img-producto2.png" alt="" />
-                                <figCaption class="d-flex justify-content-center align-items-end">
+                                <figcaption class="d-flex justify-content-center align-items-end">
                                     <p class="lato-bold">Insumos para la industria alimentaria</p>
-                                </figCaption>
+                                </figcaption>
                             </figure>
                         </div>
                     </div>
