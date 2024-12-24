@@ -12,8 +12,8 @@ onMounted(() => {
     dataViewPort.add('(min-width: 993px)', () => {
         let listProductos = gsap.timeline({
             scrollTrigger: {
-                trigger: '.listProd1',
-                start: 'top 80%',
+                trigger: '.listProd10',
+                start: 'top 40%',
                 toggleActions: 'play none none reverse'
             }
         })
@@ -21,19 +21,19 @@ onMounted(() => {
         // animaciones
 
         listProductos
-            .to('.listProd1 .imgListProd', {
+            .to('.listProd10 .imgListProd', {
                 duration: 0.5,
                 opacity: 1,
                 x: '0%',
                 willChange: 'transform, opacity'
             })
-            .to('.listProd1 .listProdParrafo', {
+            .to('.listProd10 .listProdParrafo', {
                 duration: 0.5,
                 opacity: 1,
                 willChange: 'opacity'
             })
             .to(
-                '.listProd1 .listProdMainTit',
+                '.listProd10 .listProdMainTit',
                 {
                     duration: 0.5,
                     opacity: 1,
@@ -50,33 +50,36 @@ onMounted(() => {
         <div class="container">
             <div class="row">
                 <div
-                    id="salmon-atlantico"
-                    class="listProd1 listProd blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                    id="cordero-patagonico"
+                    class="listProd10 listProd blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-12 col-lg-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure class="imgListProd">
-                            <img src="@/assets/list-products/salmon-atlantico.png" alt="" />
+                            <img src="@/assets/list-products/cordero-atagonico.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="listProdMainTit mainTit corinthia-bold text-center pb-4">
-                                Salmón Atlantico
+                                Cordero Patagónico
                             </h3>
                             <div class="listProdParrafo">
                                 <p>
-                                    Somos líderes en la importación y distribución del salmón en el
-                                    Perú. Trabajamos con proveedores que cuidan y protegen el medio
-                                    ambiente.
+                                    Desde 1988 el Frigorífico Simunovic inicia la crianza de coderos
+                                    patagónicos en la región de Magallanes.
                                 </p>
                                 <p>
-                                    Desarrollan la piscicultura con los más altos estándares de
-                                    calidad a nivel mundial. Todo nuestro salmón es de calidad
-                                    Premium.
+                                    Ubicados en el extremo del sur de América, en la zona más
+                                    austral de Chile y junto al Estrecho del mismo nombre, se sitúa
+                                    la ciudad de Punta Arenas.
                                 </p>
                                 <p>
-                                    Lo comercializamos en distintas presentaciones: Fresco (entero y
-                                    en filetes), congelado (filetes y porciones empacadas al vacío).
+                                    La región de Magallanes posee un clima frío y libre de
+                                    contaminación que se puede sentir en sus extensas praderas, con
+                                    ríos que son fuente de agua cristalina que nacen de glaciares
+                                    milenarios. En este ambiente libre de químicos y pesticidas, se
+                                    crían animales sanos, ideales para una producción ovina que está
+                                    entre las mejores del mundo.
                                 </p>
                             </div>
                         </div>

@@ -12,7 +12,7 @@ onMounted(() => {
     dataViewPort.add('(min-width: 993px)', () => {
         let listProductos = gsap.timeline({
             scrollTrigger: {
-                trigger: '.listProd1',
+                trigger: '.listProd2',
                 start: 'top 80%',
                 toggleActions: 'play none none reverse'
             }
@@ -21,19 +21,19 @@ onMounted(() => {
         // animaciones
 
         listProductos
-            .to('.listProd1 .imgListProd', {
+            .to('.listProd2 .imgListProd', {
                 duration: 0.5,
                 opacity: 1,
                 x: '0%',
                 willChange: 'transform, opacity'
             })
-            .to('.listProd1 .listProdParrafo', {
+            .to('.listProd2 .listProdParrafo', {
                 duration: 0.5,
                 opacity: 1,
                 willChange: 'opacity'
             })
             .to(
-                '.listProd1 .listProdMainTit',
+                '.listProd2 .listProdMainTit',
                 {
                     duration: 0.5,
                     opacity: 1,
@@ -50,33 +50,33 @@ onMounted(() => {
         <div class="container">
             <div class="row">
                 <div
-                    id="salmon-atlantico"
-                    class="listProd1 listProd blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                    id="salmon-ahumado-carpaccios"
+                    class="listProd2 listProd blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
                     <div class="col-12 col-lg-6 listProdImg">
                         <figure class="imgListProd">
-                            <img src="@/assets/list-products/salmon-atlantico.png" alt="" />
+                            <img src="@/assets/list-products/salmon-ahumado.png" alt="" />
                         </figure>
                     </div>
                     <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="listProdMainTit mainTit corinthia-bold text-center pb-4">
-                                Salmón Atlantico
+                                Salmón Ahumado y Carpaccios
                             </h3>
                             <div class="listProdParrafo">
                                 <p>
-                                    Somos líderes en la importación y distribución del salmón en el
-                                    Perú. Trabajamos con proveedores que cuidan y protegen el medio
-                                    ambiente.
+                                    Desde hace más de 20 años importamos y distribuimos salmón
+                                    ahumado congelado South Wind. Producido en una planta
+                                    certificada que cumple con los estándares más altos de calidad y
+                                    de cuidado del medio ambiente, nuestro salmón ahumado viene en
+                                    porciones perfectas, cada lonja pesa 25 gramos, se vende en
+                                    presentaciones de 100, 200 y 400 gramos, al vacío, listo para
+                                    comer una vez descongelado.
                                 </p>
                                 <p>
-                                    Desarrollan la piscicultura con los más altos estándares de
-                                    calidad a nivel mundial. Todo nuestro salmón es de calidad
-                                    Premium.
-                                </p>
-                                <p>
-                                    Lo comercializamos en distintas presentaciones: Fresco (entero y
-                                    en filetes), congelado (filetes y porciones empacadas al vacío).
+                                    También de South Wind, nos llega el estuche de carpaccio de
+                                    salmón de 100 gramos. Son finas lonjas de salmón crudo levemente
+                                    sazonado para descongelar y hacer volar tu imaginación.
                                 </p>
                             </div>
                         </div>

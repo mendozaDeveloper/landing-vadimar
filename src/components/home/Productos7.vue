@@ -12,8 +12,8 @@ onMounted(() => {
     dataViewPort.add('(min-width: 993px)', () => {
         let listProductos = gsap.timeline({
             scrollTrigger: {
-                trigger: '.listProd1',
-                start: 'top 80%',
+                trigger: '.listProd8',
+                start: 'top 40%',
                 toggleActions: 'play none none reverse'
             }
         })
@@ -21,19 +21,19 @@ onMounted(() => {
         // animaciones
 
         listProductos
-            .to('.listProd1 .imgListProd', {
+            .to('.listProd8 .imgListProd', {
                 duration: 0.5,
                 opacity: 1,
                 x: '0%',
                 willChange: 'transform, opacity'
             })
-            .to('.listProd1 .listProdParrafo', {
+            .to('.listProd8 .listProdParrafo', {
                 duration: 0.5,
                 opacity: 1,
                 willChange: 'opacity'
             })
             .to(
-                '.listProd1 .listProdMainTit',
+                '.listProd8 .listProdMainTit',
                 {
                     duration: 0.5,
                     opacity: 1,
@@ -50,33 +50,33 @@ onMounted(() => {
         <div class="container">
             <div class="row">
                 <div
-                    id="salmon-atlantico"
-                    class="listProd1 listProd blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                    id="kani-kama"
+                    class="listProd8 listProd blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-12 col-lg-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure class="imgListProd">
-                            <img src="@/assets/list-products/salmon-atlantico.png" alt="" />
+                            <img src="@/assets/list-products/kani-kana.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="listProdMainTit mainTit corinthia-bold text-center pb-4">
-                                Salmón Atlantico
+                                Kani Kama <br />
+                                Sea Leg
                             </h3>
                             <div class="listProdParrafo">
                                 <p>
-                                    Somos líderes en la importación y distribución del salmón en el
-                                    Perú. Trabajamos con proveedores que cuidan y protegen el medio
-                                    ambiente.
+                                    Nuestro Surimi es elaborado a base de pescado blanco de las
+                                    frías y profundas aguas del puerto Deseado, en la Patagonia
+                                    Argentina. El Surimi es la máxima expresión de la proteína de
+                                    pescado. Se elabora con pescado recién capturado, tomando la
+                                    proteína de mejor calidad, de alto valor nutricional, libre de
+                                    gluten, bajo en calorías y colesterol, sin espinas y se adiciona
+                                    sabor a cangrejo.
                                 </p>
                                 <p>
-                                    Desarrollan la piscicultura con los más altos estándares de
-                                    calidad a nivel mundial. Todo nuestro salmón es de calidad
-                                    Premium.
-                                </p>
-                                <p>
-                                    Lo comercializamos en distintas presentaciones: Fresco (entero y
-                                    en filetes), congelado (filetes y porciones empacadas al vacío).
+                                    Es un producto envasado al vacío, pasteurizado, cocido y listo
+                                    para comer después de descongelar.
                                 </p>
                             </div>
                         </div>

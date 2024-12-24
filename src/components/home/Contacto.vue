@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import emailjs from 'emailjs-com'
 import { Form, Field, useForm } from 'vee-validate'
 import { schema } from './schemas/validationSchema.js'
@@ -27,10 +29,10 @@ const sendEmail = async (values) => {
         // Mostrar mensaje de éxito
         Swal.fire({
             icon: 'success',
-            title: '¡Correo enviado!',
+            title: '¡Envío Exitoso!',
             text: 'El correo se ha enviado correctamente.',
-            confirmButtonColor: '#3085d6',
-            confirmButtonText: 'Aceptar'
+            confirmButtonText: 'Cerrar ventana',
+            allowOutsideClick: false
         })
     } catch (error) {
         console.error(error)
@@ -38,16 +40,45 @@ const sendEmail = async (values) => {
             icon: 'error',
             title: '¡Error!',
             text: 'No se pudo enviar el correo. Inténtalo nuevamente.',
-            confirmButtonColor: '#d33',
-            confirmButtonText: 'Cerrar'
+            confirmButtonText: 'Cerrar ventana',
+            allowOutsideClick: false
         })
     }
 }
 
 const onSubmit = handleSubmit(async (values, { resetForm }) => {
-    console.log('Formulario Enviado', values)
     await sendEmail(values)
     resetForm()
+})
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+    let dataViewPort = gsap.matchMedia()
+
+    dataViewPort.add('(min-width: 993px)', () => {
+        let contacto = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#contacto',
+                start: 'top 40%',
+                toggleActions: 'play none none reverse',
+                ease: 'power3.inOut'
+            }
+        })
+
+        ////// Animaciones //////
+
+        contacto.to(
+            '#contThridTit',
+            {
+                duration: 0.6,
+                opacity: 1,
+                y: '0%',
+                willChange: 'transform, opacity'
+            },
+            '+=0.1'
+        )
+    })
 })
 </script>
 
@@ -57,7 +88,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
             <div class="row">
                 <div class="d-flex justify-content-center">
                     <div class="containerTitles mb-4 text-center">
-                        <h2 class="thridTit lato-black mb-0">Contáctanos</h2>
+                        <h2 id="contThridTit" class="thridTit lato-black mb-0">Contáctanos</h2>
                     </div>
                 </div>
             </div>
@@ -131,7 +162,9 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                     </div>
                     <div>
                         <div class="col-12 pt-4">
-                            <div class="mx-auto d-flex justify-content-center align-items-center">
+                            <div
+                                class="mx-auto d-flex justify-content-center align-items-center flex-column"
+                            >
                                 <button
                                     type="submit"
                                     class="btnCustom btnCustomSubmit btn black-background-block"
@@ -140,6 +173,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                                     {{ isSubmitting ? 'Enviando formulario...' : 'Enviar Mensaje' }}
                                 </button>
                             </div>
+                            <p class="pt-2 text-end">* Campos Obligatorios</p>
                         </div>
                     </div>
                     <div v-if="Object.keys(errors).length" class="p-5 pb-0">
@@ -252,12 +286,16 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
                                 <div>
                                     <a
                                         href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#politicasPrivacidad"
                                         class="text-white text-decoration-underline lato-black"
                                         >Aviso legal</a
                                     >
                                     |
                                     <a
                                         href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#politicasPrivacidad"
                                         class="text-white text-decoration-underline lato-black"
                                         >PolÍtica de privacidad</a
                                     >

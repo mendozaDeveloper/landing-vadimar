@@ -1,4 +1,7 @@
 <script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import { Navigation } from 'swiper/modules'
@@ -19,6 +22,75 @@ const breakpoints = {
         centeredSlides: true
     }
 }
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+    let dataViewPort = gsap.matchMedia()
+
+    dataViewPort.add('(min-width: 993px)', () => {
+        let Espcialidad = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#la-especialidad',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+                ease: 'power3.inOut'
+            }
+        })
+
+        ////// Animaciones //////
+
+        Espcialidad.to('#EspBackTit1', {
+            duration: 0.6,
+            opacity: 0.08,
+            y: '-50%',
+            x: '0%',
+            willChange: 'transform, opacity'
+        })
+            .to(
+                '#EspBackTit2',
+                {
+                    duration: 0.6,
+                    opacity: 0.08,
+                    y: '-50%',
+                    x: '0%',
+                    willChange: 'transform, opacity'
+                },
+                '<'
+            )
+            .to(
+                '#EspMainTit',
+                {
+                    duration: 0.6,
+                    opacity: 1,
+                    y: '0%',
+                    x: '0%',
+                    willChange: 'transform, opacity'
+                },
+                '<'
+            )
+            .to(
+                '#EspSecondTit',
+                {
+                    duration: 0.6,
+                    opacity: 1,
+                    scale: 1,
+                    willChange: 'scale, opacity'
+                },
+                '<'
+            )
+            .to(
+                '#productos-slider',
+                {
+                    duration: 0.6,
+                    opacity: 1,
+                    y: '0%',
+                    willChange: 'transform, opacity'
+                },
+                '+=0.05'
+            )
+    })
+})
 </script>
 
 <template>
@@ -27,14 +99,16 @@ const breakpoints = {
             <div class="row">
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <div class="containerTitles text-center mb-5">
-                        <h2 class="mainTit corinthia-bold mt-0 mb-0">La Especialidad</h2>
-                        <h4 class="backTit">Nuestros</h4>
+                        <h2 id="EspMainTit" class="mainTit corinthia-bold mt-0 mb-0">
+                            La Especialidad
+                        </h2>
+                        <h4 id="EspBackTit1" class="backTit">Nuestros</h4>
                     </div>
                     <div class="containerTitles text-center">
-                        <h3 class="secondTit lato-black">
+                        <h3 id="EspSecondTit" class="secondTit lato-black">
                             Pescados, mariscos, carnes, kani kama y masa rollos primavera
                         </h3>
-                        <h4 class="backTit">Productos</h4>
+                        <h4 id="EspBackTit2" class="backTit">Productos</h4>
                     </div>
                 </div>
             </div>

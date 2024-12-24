@@ -29,14 +29,22 @@ const handleLinkClick = () => {
                                         <div>
                                             <img src="@/assets/icon-marker-white.svg" alt="" />
                                         </div>
-                                        <div>Calle Joaquín Capello 545 Miraflores, Lima - Perú</div>
+                                        <div>
+                                            <a
+                                                href="https://maps.app.goo.gl/ZjS9G4nDgtieN8Xj6"
+                                                target="_blank"
+                                                class="text-white text-decoration-none"
+                                                >Calle Joaquín Capello 545 Miraflores, Lima -
+                                                Perú</a
+                                            >
+                                        </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-4 mb-3">
                                         <div>
                                             <img src="@/assets/icon-phone-white.svg" alt="" />
                                         </div>
                                         <div class="d-flex align-items-center gap-4">
-                                            <span>+511 604 3200</span>
+                                            <span>+511 604 3200</span> <span>(01) 604 3200</span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-4 mb-3">
@@ -45,10 +53,42 @@ const handleLinkClick = () => {
                                         </div>
                                         <div class="d-flex align-items-center gap-4">
                                             <span
-                                                >+51 970 076 318<br />
-                                                +51 934 568 737<br />
-                                                +51 957 514 759</span
-                                            >
+                                                ><a
+                                                    href="https://wa.me/51970076318"
+                                                    target="_blank"
+                                                    class="text-white text-decoration-none"
+                                                    >+51 970 076 318</a
+                                                ><br />
+                                                <a
+                                                    href="https://wa.me/51934568737"
+                                                    target="_blank"
+                                                    class="text-white text-decoration-none"
+                                                    >+51 934 568 737</a
+                                                >
+                                                <br />
+                                                <a
+                                                    href="https://wa.me/51957514759"
+                                                    target="_blank"
+                                                    class="text-white text-decoration-none"
+                                                    >+51 957 514 759</a
+                                                >
+                                            </span>
+                                            <span>
+                                                <a
+                                                    href="https://wa.me/51919483776"
+                                                    target="_blank"
+                                                    class="text-white text-decoration-none"
+                                                    >+51 919 483 776</a
+                                                >
+                                                <br />
+                                                <a
+                                                    href="https://wa.me/51919492089"
+                                                    target="_blank"
+                                                    class="text-white text-decoration-none"
+                                                    >+51 919 492 089</a
+                                                >
+                                                <br /><br />
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-4 mb-3">

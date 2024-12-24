@@ -1,15 +1,15 @@
 <script setup>
 import { ref } from 'vue'
 
-const videoUrl = ref('https://www.youtube.com/embed/26PaWIYYaLg')
+// const videoUrl = ref('https://www.youtube.com/embed/26PaWIYYaLg')
 </script>
 
 <template>
-    <section id="video" class="contentVideo pt-0 d-flex justify-content-center align-items-center">
+    <!--<section id="video" class="contentVideo pt-0 d-flex justify-content-center align-items-center">
         <a href="#" class="d-inline-block" data-bs-toggle="modal" data-bs-target="#videoModal">
             <img src="@/assets/play.svg" alt="" />
         </a>
-    </section>
+    </section>-->
 
     <div
         class="modal fade"
@@ -31,18 +31,21 @@ const videoUrl = ref('https://www.youtube.com/embed/26PaWIYYaLg')
                 <div class="modal-body">
                     <!-- Contenedor del video -->
                     <div class="ratio ratio-16x9">
-                        <iframe
+                        <!--<iframe
                             id="youtubeVideo"
                             :src="videoUrl"
                             title="YouTube video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
-                        ></iframe>
+                        ></iframe>-->
+
+                        <lite-youtube
+                            videoid="26PaWIYYaLg"
+                            params="controls=0&amp;playlist=Vj8uZSi0upE&amp;loop=1&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;wmode=transparent"
+                        ></lite-youtube>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<style scoped lang="scss"></style>

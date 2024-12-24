@@ -2,6 +2,7 @@
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 
 import SideBar from './home/SideBar.vue'
+import PoliticasPrivacidad from './home/PoliticasPrivacidad.vue'
 
 const showMenu = ref(false)
 
@@ -74,6 +75,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', handleScroll)
 })
+
+// const videoUrl = ref('https://www.youtube.com/embed/26PaWIYYaLg')
 </script>
 
 <template>
@@ -136,4 +139,36 @@ onBeforeUnmount(() => {
             <slot></slot>
         </div>
     </div>
+
+    <div
+        class="modal fade"
+        id="videoModal"
+        tabindex="-1"
+        aria-labelledby="videoModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered custom-modal-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div id="videoContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <PoliticasPrivacidad />
 </template>
+
+<style scoped>
+#videoContainer {
+    min-height: 400px;
+}
+</style>

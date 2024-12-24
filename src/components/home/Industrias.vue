@@ -1,4 +1,82 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+/*import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'*/
+
+// gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+    /*let dataViewPort = gsap.matchMedia()
+
+    dataViewPort.add('(min-width: 993px)', () => {
+        let industriaCont = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#industriaCont',
+                start: 'top 60%',
+                toggleActions: 'play none none reverse',
+                ease: 'power3.inOut'
+            }
+        })
+
+        let industria2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#blockListProd2',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+                ease: 'power3.inOut'
+            }
+        })
+
+        ////// Animaciones //////
+
+        industriaCont
+            .to('#industriaImg1', {
+                duration: 0.5,
+                opacity: 1,
+                y: '0%',
+                willChange: 'transform, opacity'
+            })
+            .to('#IndusThridTit', {
+                duration: 0.6,
+                opacity: 1,
+                x: '1',
+                willChange: 'transform, opacity'
+            })
+            .to(
+                '#listProdText',
+                {
+                    duration: 0.6,
+                    opacity: 1,
+                    y: '0%',
+                    willChange: 'transform, opacity'
+                },
+                '<'
+            )
+
+        industria2.to('#blockListProd2', {
+            duration: 0.5,
+            opacity: 1,
+            y: '0%',
+            willChange: 'transform, opacity'
+        })
+    })*/
+
+    const modal = document.getElementById('videoModal')
+    const videoContainer = document.getElementById('videoContainer')
+
+    // Cargar el video cuando se muestra el modal
+    modal.addEventListener('shown.bs.modal', () => {
+        videoContainer.innerHTML = `
+        <lite-youtube videoid="26PaWIYYaLg" style="aspect-ratio: 16/9;"></lite-youtube>
+      `
+    })
+
+    // Eliminar el video cuando se cierra el modal
+    modal.addEventListener('hidden.bs.modal', () => {
+        videoContainer.innerHTML = ''
+    })
+})
+</script>
 
 <template>
     <section id="industria" class="contentPadding pb-0">
@@ -6,24 +84,30 @@
             <div class="row">
                 <div class="d-flex">
                     <div class="containerTitles mb-4">
-                        <h2 class="thridTit lato-black mb-0">Industria<br />Alimentaria</h2>
+                        <h2 id="IndusThridTit" class="thridTit lato-black mb-0">
+                            Industria<br />Alimentaria
+                        </h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="pt-0 pb-5">
+    <section id="industriaCont" class="pt-0 pb-5">
         <div class="container">
             <div class="row">
                 <div
+                    id="blockListProd"
                     class="blockListProd blockListProdRight d-flex justify-content-between flex-column flex-lg-row"
                 >
                     <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
-                        <figure>
+                        <figure id="industriaImg1">
                             <img src="@/assets/list-industria/harina-mostaza1.jpg" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
+                    <div
+                        id="listProdText"
+                        class="listProdText col-12 col-lg-6 d-flex align-items-end"
+                    >
                         <div class="black-color">
                             <h3 class="mainTit corinthia-bold text-center pb-4">
                                 Harina de Mostaza Importada
@@ -53,6 +137,7 @@
                     </div>
                 </div>
                 <div
+                    id="blockListProd2"
                     class="blockListProd d-flex justify-content-between flex-column flex-lg-row mb-0"
                 >
                     <div class="col-12 col-lg-6 listProdImg listProdImgBlack">
@@ -106,7 +191,7 @@
                                         href="/downloads/brochure-harina-mostaza.pdf"
                                         target="_blank"
                                         class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
-                                        >VER CATÁLOGO</a
+                                        >CATÁLOGO</a
                                     >
                                     <a
                                         href="/downloads/tabla-de-especificaciones.pdf"
@@ -114,10 +199,12 @@
                                         class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
                                         >ESPECIFICACIONES<br />TÉCNICAS</a
                                     >
-                                    <RouterLink
-                                        to="#video"
+                                    <a
+                                        href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#videoModal"
                                         class="btnCustom btnCustomList btn d-flex justify-content-center align-items-center mb-3 mb-xl-0"
-                                        >VER VIDEO</RouterLink
+                                        >VIDEO</a
                                     >
                                 </div>
                             </div>
@@ -127,16 +214,4 @@
             </div>
         </div>
     </section>
-    <!--<section class="contentPadding pt-0">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <RouterLink
-                    to="#video"
-                    class="blockMouse blockMouseStatic d-flex flex-column justify-content-center align-items-center text-center"
-                    ><span class="pb-2 lato-black">Ver<br />Video</span>
-                    <span><img src="@/assets/arrow-down.svg" alt="" /></span
-                ></RouterLink>
-            </div>
-        </div>
-    </section>-->
 </template>

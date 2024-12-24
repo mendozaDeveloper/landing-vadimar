@@ -12,12 +12,13 @@ const modules = [Autoplay, EffectFade]
         <swiper
             :slides-per-view="1"
             :space-between="0"
+            :speed="2500"
             :loop="true"
             class="bannerSwiper"
             :lazy="true"
             :modules="modules"
             :autoplay="{
-                delay: 3500,
+                delay: 2000,
                 disableOnInteraction: false
             }"
             :effect="'fade'"

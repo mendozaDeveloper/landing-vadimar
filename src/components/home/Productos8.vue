@@ -12,8 +12,8 @@ onMounted(() => {
     dataViewPort.add('(min-width: 993px)', () => {
         let listProductos = gsap.timeline({
             scrollTrigger: {
-                trigger: '.listProd1',
-                start: 'top 80%',
+                trigger: '.listProd9',
+                start: 'top 40%',
                 toggleActions: 'play none none reverse'
             }
         })
@@ -21,19 +21,19 @@ onMounted(() => {
         // animaciones
 
         listProductos
-            .to('.listProd1 .imgListProd', {
+            .to('.listProd9 .imgListProd', {
                 duration: 0.5,
                 opacity: 1,
                 x: '0%',
                 willChange: 'transform, opacity'
             })
-            .to('.listProd1 .listProdParrafo', {
+            .to('.listProd9 .listProdParrafo', {
                 duration: 0.5,
                 opacity: 1,
                 willChange: 'opacity'
             })
             .to(
-                '.listProd1 .listProdMainTit',
+                '.listProd9 .listProdMainTit',
                 {
                     duration: 0.5,
                     opacity: 1,
@@ -50,33 +50,35 @@ onMounted(() => {
         <div class="container">
             <div class="row">
                 <div
-                    id="salmon-atlantico"
-                    class="listProd1 listProd blockListProd d-flex justify-content-between flex-column flex-lg-row"
+                    id="carne-wagyu"
+                    class="listProd9 listProd blockListProd d-flex justify-content-between flex-column flex-lg-row"
                 >
-                    <div class="col-12 col-lg-6 listProdImg">
+                    <div class="col-md-12 col-lg-6 listProdImg">
                         <figure class="imgListProd">
-                            <img src="@/assets/list-products/salmon-atlantico.png" alt="" />
+                            <img src="@/assets/list-products/carne-wagyu.png" alt="" />
                         </figure>
                     </div>
-                    <div class="listProdText col-12 col-lg-6 d-flex align-items-end">
+                    <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
                         <div>
                             <h3 class="listProdMainTit mainTit corinthia-bold text-center pb-4">
-                                Salmón Atlantico
+                                Carne Wagyu
                             </h3>
                             <div class="listProdParrafo">
                                 <p>
-                                    Somos líderes en la importación y distribución del salmón en el
-                                    Perú. Trabajamos con proveedores que cuidan y protegen el medio
-                                    ambiente.
+                                    Agrícola Mollendo, fundada en 2002, cría su ganado Wagyu en las
+                                    extensas praderas de la región de Los Lagos, cerca de la ciudad
+                                    de Osorno.
                                 </p>
                                 <p>
-                                    Desarrollan la piscicultura con los más altos estándares de
-                                    calidad a nivel mundial. Todo nuestro salmón es de calidad
-                                    Premium.
+                                    Estos campos están ubicados en el sur de Chile y tienen
+                                    inmejorables condiciones ambientales, cerca al río Rahue y de
+                                    los bosques del Parque Nacional Puyehue.
                                 </p>
                                 <p>
-                                    Lo comercializamos en distintas presentaciones: Fresco (entero y
-                                    en filetes), congelado (filetes y porciones empacadas al vacío).
+                                    La región de los Lagos se extiende al este desde la cordillera
+                                    de los Andes hasta el océano Pacífico al oeste. En este ambiente
+                                    libre de pestes y enfermedades, se cría un ganado Wagyu de clase
+                                    mundial, cuya carne tiene un marmoleo y sabor excepcional.
                                 </p>
                             </div>
                         </div>

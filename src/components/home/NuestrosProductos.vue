@@ -15,7 +15,7 @@ onMounted(() => {
                 trigger: '#nuestros-productos .productCardIzq',
                 start: 'top 80%',
                 toggleActions: 'play none none reverse',
-                ease: 'power2.in'
+                ease: 'power3.inOut'
             }
         })
 
@@ -54,35 +54,40 @@ onMounted(() => {
         ////// Animaciones //////
 
         productCardIzq.to('#nuestros-productos .productCardIzq', {
-            duration: 0.8,
+            duration: 0.6,
             x: '0%',
-            opacity: 1
+            opacity: 1,
+            willChange: 'transform, opacity'
         })
 
         productCardDer.to('#nuestros-productos .productCardDer', {
-            duration: 0.8,
+            duration: 0.6,
             x: '0%',
-            opacity: 1
+            opacity: 1,
+            willChange: 'transform, opacity'
         })
 
         ProdTitle.to('#ProdTitle', {
-            duration: 0.8,
+            duration: 0.6,
             opacity: 1,
             scale: 1,
-            y: '0%'
+            y: '0%',
+            willChange: 'transform, opacity, scale'
         })
 
         ProdSecondTit.to('#ProdSecondTit', {
-            duration: 0.8,
+            duration: 0.6,
             opacity: 1,
-            y: '0%'
+            y: '0%',
+            willChange: 'transform, opacity'
         })
 
         ProdBackTit.to('#ProdBackTit', {
             duration: 0.9,
             opacity: 0.08,
             y: '-50%',
-            x: '0%'
+            x: '0%',
+            willChange: 'transform, opacity'
         })
     })
 })

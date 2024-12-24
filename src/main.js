@@ -1,3 +1,6 @@
+import 'lite-youtube-embed'
+import 'lite-youtube-embed/src/lite-yt-embed.css'
+
 import { createApp } from 'vue'
 
 import App from './App.vue'
