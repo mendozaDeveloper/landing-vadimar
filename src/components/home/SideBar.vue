@@ -44,7 +44,10 @@ const handleLinkClick = () => {
                                             <img src="@/assets/icon-phone-white.svg" alt="" />
                                         </div>
                                         <div class="d-flex align-items-center gap-4">
-                                            <span>+511 604 3200</span> <span>(01) 604 3200</span>
+                                            <span
+                                                >+511 604 3200 <br />
+                                                (01) 604 3200</span
+                                            >
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-4 mb-3">
@@ -72,8 +75,7 @@ const handleLinkClick = () => {
                                                     class="text-white text-decoration-none"
                                                     >+51 957 514 759</a
                                                 >
-                                            </span>
-                                            <span>
+                                                <br />
                                                 <a
                                                     href="https://wa.me/51919483776"
                                                     target="_blank"
@@ -87,7 +89,6 @@ const handleLinkClick = () => {
                                                     class="text-white text-decoration-none"
                                                     >+51 919 492 089</a
                                                 >
-                                                <br /><br />
                                             </span>
                                         </div>
                                     </div>

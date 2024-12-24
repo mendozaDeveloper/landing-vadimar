@@ -52,7 +52,7 @@ onMounted(() => {
                 {
                     duration: 0.6,
                     opacity: 0.08,
-                    y: '-50%',
+                    y: '-62%',
                     x: '0%',
                     willChange: 'transform, opacity'
                 },
@@ -108,7 +108,7 @@ onMounted(() => {
                         <h3 id="EspSecondTit" class="secondTit lato-black">
                             Pescados, mariscos, carnes, kani kama y masa rollos primavera
                         </h3>
-                        <h4 id="EspBackTit2" class="backTit">Productos</h4>
+                        <h4 id="EspBackTit2" class="backTit EspBackTit2">Productos</h4>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { RouterLink } from 'vue-router'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -113,25 +114,35 @@ onMounted(() => {
                 >
                     <div>
                         <div ref="productCardIzq" class="productCard productCardIzq">
-                            <figure>
-                                <img src="@/assets/img-producto1.png" alt="" />
-                                <figcaption class="d-flex justify-content-center align-items-end">
-                                    <p class="lato-bold">
-                                        Pescados, mariscos, carnes, masa rollos primavera y kani
-                                        kama
-                                    </p>
-                                </figcaption>
-                            </figure>
+                            <RouterLink to="#la-especialidad">
+                                <figure>
+                                    <img src="@/assets/img-producto1.png" alt="" />
+                                    <figcaption
+                                        class="d-flex justify-content-center align-items-end"
+                                    >
+                                        <p class="lato-bold text-white">
+                                            Pescados, mariscos, carnes, masa rollos primavera y kani
+                                            kama
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </RouterLink>
                         </div>
                     </div>
                     <div>
                         <div ref="productCardDer" class="productCard productCardDer">
-                            <figure>
-                                <img src="@/assets/img-producto2.png" alt="" />
-                                <figcaption class="d-flex justify-content-center align-items-end">
-                                    <p class="lato-bold">Insumos para la industria alimentaria</p>
-                                </figcaption>
-                            </figure>
+                            <RouterLink to="#industria">
+                                <figure>
+                                    <img src="@/assets/img-producto2.png" alt="" />
+                                    <figcaption
+                                        class="d-flex justify-content-center align-items-end"
+                                    >
+                                        <p class="lato-bold text-white">
+                                            Insumos para la industria alimentaria
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </RouterLink>
                         </div>
                     </div>
                 </div>

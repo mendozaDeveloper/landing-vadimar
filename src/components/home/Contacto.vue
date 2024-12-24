@@ -297,7 +297,7 @@ onMounted(() => {
                                         data-bs-toggle="modal"
                                         data-bs-target="#politicasPrivacidad"
                                         class="text-white text-decoration-underline lato-black"
-                                        >PolÍtica de privacidad</a
+                                        >Política de privacidad</a
                                     >
                                 </div>
                             </div>
