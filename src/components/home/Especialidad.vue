@@ -47,7 +47,7 @@ onMounted(() => {
             x: '0%',
             willChange: 'transform, opacity'
         })
-            .to(
+            /*.to(
                 '#EspBackTit2',
                 {
                     duration: 0.6,
@@ -57,7 +57,7 @@ onMounted(() => {
                     willChange: 'transform, opacity'
                 },
                 '<'
-            )
+            )*/
             .to(
                 '#EspMainTit',
                 {
@@ -102,13 +102,12 @@ onMounted(() => {
                         <h2 id="EspMainTit" class="mainTit corinthia-bold mt-0 mb-0">
                             La Especialidad
                         </h2>
-                        <h4 id="EspBackTit1" class="backTit">Nuestros</h4>
-                    </div>
-                    <div class="containerTitles text-center">
                         <h3 id="EspSecondTit" class="secondTit lato-black">
                             Pescados, mariscos, carnes, kani kama y masa rollos primavera
                         </h3>
-                        <h4 id="EspBackTit2" class="backTit EspBackTit2">Productos</h4>
+                        <div>
+                            <h4 id="EspBackTit1" class="backTit">Nuestros Productos</h4>
+                        </div>
                     </div>
                 </div>
             </div>

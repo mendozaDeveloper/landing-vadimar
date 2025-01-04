@@ -103,6 +103,25 @@ body {
     z-index: 999;
 }
 
+.scroll-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $vadimar-rojo;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
 .modal-backdrop {
     z-index: 999;
 }
@@ -212,7 +231,6 @@ body {
     z-index: 99;
     transition: all 0.3s ease-in-out;
     &.fixed-top {
-        background-color: #fff;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -312,11 +330,19 @@ body {
 
     .swiper-button-prev,
     .swiper-button-next {
-        width: 86px;
-        height: 16px;
-        top: 190px;
-        opacity: 0.8;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-color: $vadimar-rojo;
         transition: opacity 0.3s ease-in-out;
+        fill: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
         &::after {
             background-repeat: no-repeat;
             background-position: center;
@@ -328,14 +354,14 @@ body {
     }
 
     .swiper-button-prev {
-        background-image: url('../assets/arrow-left.svg');
-        left: 16%;
-        transform: translateX(-16%);
+        background-image: url('../assets/chevron-up.svg');
+        left: 20px;
+        transform: rotate(-90deg);
     }
     .swiper-button-next {
-        background-image: url('../assets/arrow-right.svg');
-        right: 16%;
-        transform: translateX(-16%);
+        background-image: url('../assets/chevron-up.svg');
+        right: 20px;
+        transform: rotate(90deg);
     }
     .swiper-slide {
         &::before {
@@ -844,6 +870,13 @@ body {
     }
 }
 
+#EspBackTit1 {
+    line-height: 150px;
+    @media (max-width: 1399px) {
+        line-height: 80px;
+    }
+}
+
 .overflow-x {
     overflow-x: hidden;
 }
@@ -917,14 +950,18 @@ body {
     }
     .modal-header {
         border-bottom: none;
-        .btn-close {
-            background-color: $vadimar-rojo;
-            border-radius: 50%;
-            padding: 1rem;
-            --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
-            &:focus {
-                box-shadow: none;
-            }
+    }
+    .btn-close {
+        background-color: $vadimar-rojo;
+        border-radius: 50%;
+        padding: 1rem;
+        --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+        &:focus {
+            box-shadow: none;
+        }
+        &.btn-close-politicas {
+            position: static;
+            opacity: 1;
         }
     }
 }
@@ -954,6 +991,8 @@ body {
         font-size: 20px;
         &:focus {
             box-shadow: none;
+            outline: none;
+            box-shadow: none;
         }
         &::placeholder {
             font-weight: 700;
@@ -969,6 +1008,14 @@ body {
             padding: 10px;
         }
     }
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    border: inherit;
+    transition: background-color 9999s ease-in-out 0s, color 9999s ease-in-out 0s;
 }
 
 /* FORMULARIO */
@@ -987,6 +1034,7 @@ body {
         text-decoration: none;
     }
 }
+
 /* FOOTER */
 
 /* POLITICAS DE PRIVACIDAD */
@@ -1276,6 +1324,12 @@ body {
                 }
             }
         }
+    }
+    .loading-text {
+        font-size: 100px;
+    }
+    .logo-loading {
+        max-width: 300px;
     }
 }
 

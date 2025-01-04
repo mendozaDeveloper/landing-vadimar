@@ -14,6 +14,19 @@ const hideText = ref(false)
 const showLogo = ref(false)
 const preloaderOpacity = ref(1)
 const translateX = ref('translateX(0%)')
+const showScrollTopButton = ref(false)
+
+// verificar si el preloader debe mostrarse
+const lastVisit = localStorage.getItem('lastVisit')
+const currentDate = new Date()
+const fifteenDaysInMillis = 15 * 24 * 60 * 60 * 1000 // 15 días en milisegundos
+
+// Si la fecha de la última visita no existe o han pasado más de 15 días
+const isFirstVisit = ref(!lastVisit || currentDate - new Date(lastVisit) > fifteenDaysInMillis)
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 
 function interpolateColor(progress) {
     const startColor = { r: 255, g: 255, b: 255 } // Blanco (#FFF)
@@ -30,8 +43,10 @@ const handleScroll = () => {
     const header = document.getElementById('header')
     if (window.scrollY > 30) {
         header.classList.add('fixed-top')
+        showScrollTopButton.value = true
     } else {
         header.classList.remove('fixed-top')
+        showScrollTopButton.value = false
     }
 }
 
@@ -43,33 +58,42 @@ onMounted(() => {
     window.addEventListener('scroll', handleScroll)
 
     // preloader
-    const interval = setInterval(() => {
-        if (percentage.value < 100) {
-            percentage.value += 1
+    if (isFirstVisit.value) {
+        // Actualizar la fecha de la última visita
+        localStorage.setItem('lastVisit', currentDate.toISOString())
 
-            backgroundColor.value = interpolateColor(percentage.value)
-        } else {
-            clearInterval(interval)
+        // Preloader
+        const interval = setInterval(() => {
+            if (percentage.value < 100) {
+                percentage.value += 1
 
-            // Iniciar la transición del texto
-            setTimeout(() => {
-                textOpacity.value = 0
+                backgroundColor.value = interpolateColor(percentage.value)
+            } else {
+                clearInterval(interval)
+
+                // Iniciar la transición del texto
                 setTimeout(() => {
-                    hideText.value = true
-                    showLogo.value = true
-                }, 1000)
-            }, 500)
+                    textOpacity.value = 0
+                    setTimeout(() => {
+                        hideText.value = true
+                        showLogo.value = true
+                    }, 1000)
+                }, 500)
 
-            // Transición final: slider hacia la izquierda
-            setTimeout(() => {
-                translateX.value = 'translateX(-100%)'
-                preloaderOpacity.value = 0
+                // Transición final: slider hacia la izquierda
                 setTimeout(() => {
-                    loading.value = false
-                }, 1000)
-            }, 4000)
-        }
-    }, 50)
+                    translateX.value = 'translateX(-100%)'
+                    preloaderOpacity.value = 0
+                    setTimeout(() => {
+                        loading.value = false
+                    }, 1000)
+                }, 4000)
+            }
+        }, 50)
+    } else {
+        // Si no es la primera visita o han pasado menos de 15 días, no mostrar el preloader
+        loading.value = false
+    }
 })
 
 onBeforeUnmount(() => {
@@ -93,7 +117,7 @@ onBeforeUnmount(() => {
         >
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center">
+                    <div class="col-12 text-center">
                         <div
                             v-if="!hideText"
                             class="loading-text bodoni72cregular"
@@ -102,7 +126,6 @@ onBeforeUnmount(() => {
                             {{ percentage }}%
                         </div>
                     </div>
-                    <div class="col-md-6"></div>
                 </div>
             </div>
             <img
@@ -137,6 +160,22 @@ onBeforeUnmount(() => {
             </header>
 
             <slot></slot>
+
+            <button v-show="showScrollTopButton" @click="scrollToTop" class="scroll-top-button">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-chevron-up"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+                    />
+                </svg>
+            </button>
         </div>
     </div>
 

@@ -143,7 +143,7 @@ const handleLinkClick = () => {
                                                 to="#industria"
                                                 class="nav-link"
                                                 @click="handleLinkClick"
-                                                >Insumos para la industría alimentaria</RouterLink
+                                                >Insumos para la industria alimentaria</RouterLink
                                             >
                                         </li>
                                         <li class="nav-item">

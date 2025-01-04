@@ -114,7 +114,7 @@ onMounted(() => {
                             insumos para la industria alimentaria, de calidad premium.
                         </p>
                         <p>
-                            Contamos con almacenes de frio de última generación y nuestra propia
+                            Contamos con almacenes de frío de última generación y nuestra propia
                             cadena logística con los más altos estándares de calidad.
                         </p>
                         <p>
