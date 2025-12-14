@@ -14,6 +14,7 @@ import Productos7 from '@/components/home/Productos7.vue'
 import Productos8 from '@/components/home/Productos8.vue'
 import Productos9 from '@/components/home/Productos9.vue'
 import Productos10 from '@/components/home/Productos10.vue'
+import Productos11 from '@/components/home/Productos11.vue'
 
 import Industrias from '@/components/home/Industrias.vue'
 import Contacto from '@/components/home/Contacto.vue'
@@ -35,6 +36,7 @@ import Contacto from '@/components/home/Contacto.vue'
     <Productos8 />
     <Productos9 />
     <Productos10 />
+    <Productos11 />
     <Industrias />
     <Contacto />
 </template>

@@ -208,6 +208,14 @@ onMounted(() => {
                                 />
                             </RouterLink>
                         </swiper-slide>
+                        <swiper-slide>
+                            <RouterLink to="#masa-gyoza">
+                                <img
+                                    src="@/assets/img-productos/masa-gyoza.png"
+                                    class="slider-image"
+                                />
+                            </RouterLink>
+                        </swiper-slide>
                     </swiper>
                 </div>
             </div>
