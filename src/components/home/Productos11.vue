@@ -20,11 +20,10 @@
                                 <p>
                                     Importadas de Singapur, de la misma fábrica de nuestras exitosas masas de “Spring Roll de enrollados primavera” con la misma excelencia en calidad, hechas con harinas del sudeste asiático, para maximizar la elasticidad, sabor y calidad del producto y comercializadas a nivel mundial. De fácil uso, para sus diversas preparaciones, tanto al vapor como fritas y con niveles de merma casi nulas..!
                                 </p>
-                                <p>
-                                    <figure class="imgListProd mb-0 mw-100">
-                                        <img src="@/assets/list-products/masa-gyoza2.png" class="w-100" alt="" />
-                                    </figure>
-                                </p>
+                                
+                                <figure class="imgListProd mb-0 mw-100">
+                                    <img src="@/assets/list-products/masa-gyoza2.png" class="w-100" alt="" />
+                                </figure>
                             </div>
                         </div>
                     </div>
