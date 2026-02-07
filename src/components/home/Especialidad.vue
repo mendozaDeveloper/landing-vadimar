@@ -219,7 +219,7 @@ onMounted(() => {
                         <swiper-slide>
                             <RouterLink to="#takara-bune">
                                 <img
-                                    src="@/assets/img-productos/takara-bune.png"
+                                    src="@/assets/img-productos/wasabi.png"
                                     class="slider-image"
                                 />
                             </RouterLink>

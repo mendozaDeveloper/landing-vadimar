@@ -8,7 +8,7 @@
                 >
                     <div class="col-md-12 col-lg-6 listProdImg">
                         <figure class="imgListProd">
-                            <img src="@/assets/list-products/takara-bune2.png" alt="" />
+                            <img src="@/assets/list-products/wasabi.png" alt="" />
                         </figure>
                     </div>
                     <div class="listProdText col-md-12 col-lg-6 d-flex align-items-end">
@@ -23,9 +23,6 @@
                                 <p>
                                     Sakai Spice opera bajo un plan HACCP, que garantiza un alto nivel de seguridad alimentaria, garantía de calidad y trazabilidad completa del producto que se presenta en bolsa de 1 kg.
                                 </p>
-                                <figure class="imgListProd mb-0 mw-100">
-                                    <img src="@/assets/list-products/takara-bune1.png" class="w-100" alt="" />
-                                </figure>
                             </div>
                         </div>
                     </div>

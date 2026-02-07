@@ -65,21 +65,13 @@ onMounted(() => {
                             </h3>
                             <div class="listProdParrafo">
                                 <p>
-                                    El mejillón chileno (Mytilus chilensis), también conocido como
-                                    chorito, choro o quilmahue, es una especie de molusco bivalvo
-                                    filtrador de la familia Mytilidae.
+                                    Los mejillones de criadero del sur de Chile, llamados también choritos, es una especie de molusco bivalvo filtrador de la familia Mytilidae, destacan por su pureza, frescura y alto valor nutricional. Cultivados en aguas frías y cristalinas, desarrollan una carne firme, con gran sabor y excelente textura, siendo una fuente natural de proteínas de alta calidad, omega 3, hierro, zinc y vitamina B12.
                                 </p>
                                 <p>
-                                    Además, es un recurso significativo para la acuicultura en
-                                    Chile, con una producción comercial considerable destinada
-                                    principalmente a la exportación desde el sur de Chile.
-                                    Importamos la variedad “Chilean blue mussel” (Mytilus chilensis)
-                                    criados por PESBASA, de fuente sostenible y con certificaciones
-                                    internacionales.
+                                    Son un alimento saludable, bajo en grasa y versátil, ideal para consumidores que buscan nutrición y practicidad.  Además, son procesados en plantas con certificaciones internacionales y estrictos controles sanitarios, garantizando trazabilidad, inocuidad y estándares de exportación de primer nivel.
                                 </p>
                                 <p>
-                                    Ofrecemos las presentaciones de mejillón entero (en su concha) y
-                                    pura carne, en calibres grandes (Jumbo).
+                                    Un producto premium y de fuente sostenible.
                                 </p>
                             </div>
                         </div>
